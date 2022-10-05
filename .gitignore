@@ -1,0 +1,16 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/bindbc-libuvc
+bindbc-libuvc.so
+bindbc-libuvc.dylib
+bindbc-libuvc.dll
+bindbc-libuvc.a
+bindbc-libuvc.lib
+bindbc-libuvc-test-*
+libBindBC_LibUVC.a
+*.exe
+*.o
+*.obj
+*.lst

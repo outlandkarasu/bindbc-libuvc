@@ -1,0 +1,39 @@
+{
+	"authors": [
+		"outlandkarasu"
+	],
+	"copyright": "Copyright © 2022, outlandkarasu",
+	"description": "Dynamic and static bindings to SDL2 and its satellite libraries, compatible with -betterC, @nogc, and nothrow.",
+	"license": "Boost",
+	"name": "bindbc-libuvc",
+	"targetType": "staticLibrary",
+	"targetPath": "lib",
+	"targetName": "BindBC_LibUVC",
+	"configurations": [
+		{
+			"name": "dynamic",
+			"dependencies": {
+				"bindbc-loader": "~>1.0.1"
+			}
+		},
+		{
+			"name": "dynamicBC",
+			"dependencies": {
+				"bindbc-loader": "~>1.0.1"
+			},
+			"subConfigurations": {
+				"bindbc-loader": "yesBC"
+			},
+			"dflags": ["-betterC"]
+		},
+		{
+			"name": "static",
+			"versions": ["BindLibUVC_Static"]
+		},
+		{
+			"name": "staticBC",
+			"dflags": ["-betterC"],
+			"versions": ["BindLibUVC_Static"]
+		}
+	]
+}
